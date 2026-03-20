@@ -13,7 +13,7 @@
 </script>
 
 <Popover.Root>
-  <Popover.Trigger class="flex items-center gap-0">
+  <Popover.Trigger class="flex cursor-pointer items-center gap-0">
     <Button variant="ghost" size="sm">
       <props.icon class={props.class} />
     </Button>
@@ -22,7 +22,7 @@
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <ul tabindex="0" class="flex flex-col">
       {#each props.links as { href, title } (title)}
-        <li class="rounded-md p-2 hover:bg-muted">
+        <li class="hover:bg-muted rounded-md p-2">
           <a
             role="menuitem"
             tabindex="0"
