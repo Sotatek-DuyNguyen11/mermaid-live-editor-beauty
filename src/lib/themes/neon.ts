@@ -7,7 +7,11 @@
  * CSS drop-shadows simulate the bloom/glow post-processing effect.
  */
 
-import { darkModeDiagramFixCSS, sharedDiagramCSS } from './shared-diagram-css';
+import {
+  darkModeDiagramFixCSS,
+  mindmapLabelColorCSS,
+  sharedDiagramCSS
+} from './shared-diagram-css';
 import type { DiagramTheme } from './types';
 
 /* Neon-specific CSS shared between light and dark variants */
@@ -77,6 +81,19 @@ g.classGroup rect {
 .titleText, .classTitle, g.classGroup .title-text {
   fill: #DB2777 !important;
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#831843',
+    '#1E1B4B',
+    '#064E3B',
+    '#78350F',
+    '#7F1D1D',
+    '#3B0764',
+    '#7C2D12',
+    '#134E4A'
+  ]
+})}
 `;
 
 const neonDarkDiagramCSS = `${sharedDiagramCSS}
@@ -123,6 +140,19 @@ g.classGroup rect {
 .titleText, .classTitle, g.classGroup .title-text {
   fill: #F472B6 !important;
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#F9A8D4',
+    '#C7D2FE',
+    '#A7F3D0',
+    '#FDE68A',
+    '#FCA5A5',
+    '#DDD6FE',
+    '#FED7AA',
+    '#99F6E4'
+  ]
+})}
 ${darkModeDiagramFixCSS({
   bgColor: '#120818',
   textColor: '#E8D5F5',

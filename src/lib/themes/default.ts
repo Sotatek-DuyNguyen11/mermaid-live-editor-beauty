@@ -3,7 +3,11 @@
  * Merged from default-light.ts and default-dark.ts.
  */
 
-import { darkModeDiagramFixCSS, sharedDiagramCSS } from './shared-diagram-css';
+import {
+  darkModeDiagramFixCSS,
+  mindmapLabelColorCSS,
+  sharedDiagramCSS
+} from './shared-diagram-css';
 import type { DiagramTheme } from './types';
 
 const lightDiagramCSS = `${sharedDiagramCSS}
@@ -36,6 +40,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 1px 3px rgba(0, 82, 204, 0.06));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#1E3A5F',
+    '#164E63',
+    '#14532D',
+    '#78350F',
+    '#7F1D1D',
+    '#3B0764',
+    '#7C2D12',
+    '#134E4A'
+  ]
+})}
 `;
 
 const darkDiagramCSS = `${sharedDiagramCSS}
@@ -68,6 +85,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 1px 4px rgba(59, 130, 246, 0.10));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#BFDBFE',
+    '#A5F3FC',
+    '#BBF7D0',
+    '#FDE68A',
+    '#FECACA',
+    '#DDD6FE',
+    '#FED7AA',
+    '#99F6E4'
+  ]
+})}
 ${darkModeDiagramFixCSS({
   bgColor: '#0A1929',
   textColor: '#F1F5F9',

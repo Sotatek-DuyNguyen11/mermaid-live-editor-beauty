@@ -4,7 +4,11 @@
  * Dark variant: original deep purple glassmorphism.
  */
 
-import { darkModeDiagramFixCSS, sharedDiagramCSS } from './shared-diagram-css';
+import {
+  darkModeDiagramFixCSS,
+  mindmapLabelColorCSS,
+  sharedDiagramCSS
+} from './shared-diagram-css';
 import type { DiagramTheme } from './types';
 
 const glassLightDiagramCSS = `${sharedDiagramCSS}
@@ -37,6 +41,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 1px 4px rgba(139, 92, 246, 0.08));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#3B0764',
+    '#831843',
+    '#14532D',
+    '#78350F',
+    '#7F1D1D',
+    '#1E1B4B',
+    '#7C2D12',
+    '#134E4A'
+  ]
+})}
 `;
 
 const glassDarkDiagramCSS = `${sharedDiagramCSS}
@@ -69,6 +86,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 1px 6px rgba(139, 92, 246, 0.10));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#DDD6FE',
+    '#F9A8D4',
+    '#BBF7D0',
+    '#FDE68A',
+    '#FECACA',
+    '#C7D2FE',
+    '#FED7AA',
+    '#99F6E4'
+  ]
+})}
 ${darkModeDiagramFixCSS({
   bgColor: '#150C35',
   textColor: '#F5F3FF',

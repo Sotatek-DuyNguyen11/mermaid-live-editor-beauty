@@ -2,7 +2,7 @@
   import Card from '$/components/Card/Card.svelte';
   import { Button } from '$/components/ui/button';
   import { getSampleDiagrams } from '$/util/mermaid';
-  import { updateCode } from '$lib/util/state';
+  import { stateStore, updateCode } from '$lib/util/state';
   import { logEvent } from '$lib/util/stats';
   import ShapesIcon from '~icons/material-symbols/account-tree-outline-rounded';
 
@@ -57,6 +57,8 @@
       .filter((key) => !mainDiagrams.includes(key))
       .sort()
   ];
+
+  const isActiveSample = (sample: string): boolean => $stateStore.code === samples[sample];
 </script>
 
 <Card title="Sample Diagrams" isOpen isStackable icon={{ component: ShapesIcon }}>
@@ -65,7 +67,12 @@
       <Button
         variant="ghost-outline"
         size="sm"
-        class="w-fit min-w-20 flex-grow normal-case"
+        aria-pressed={isActiveSample(sample)}
+        class={[
+          'w-fit min-w-20 flex-grow normal-case transition-colors',
+          isActiveSample(sample) &&
+            'border-accent/70 bg-accent/5 text-foreground ring-accent/15 ring-1'
+        ]}
         onclick={() => loadSampleDiagram(sample)}>
         {sample}
       </Button>
