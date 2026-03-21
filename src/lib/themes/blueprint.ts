@@ -4,7 +4,11 @@
  * Light: technical drawing on light paper, cyan accents, dark text.
  */
 
-import { darkModeDiagramFixCSS, sharedDiagramCSS } from './shared-diagram-css';
+import {
+  darkModeDiagramFixCSS,
+  mindmapLabelColorCSS,
+  sharedDiagramCSS
+} from './shared-diagram-css';
 import type { DiagramTheme } from './types';
 
 const blueprintSharedCSS = `
@@ -79,6 +83,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 1px 4px rgba(0, 180, 219, 0.08));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#0C2D4A',
+    '#0C3547',
+    '#0D2818',
+    '#2D1F00',
+    '#3B1010',
+    '#1E1145',
+    '#351A03',
+    '#0D3535'
+  ]
+})}
 `;
 
 const blueprintDarkDiagramCSS = `${sharedDiagramCSS}
@@ -114,6 +131,19 @@ g.classGroup rect {
 .note {
   filter: drop-shadow(0 2px 8px rgba(0, 180, 219, 0.10));
 }
+${mindmapLabelColorCSS({
+  rootColor: '#FFFFFF',
+  sectionColors: [
+    '#7DD3FC',
+    '#67E8F9',
+    '#86EFAC',
+    '#FDE68A',
+    '#FCA5A5',
+    '#C4B5FD',
+    '#FDBA74',
+    '#5EEAD4'
+  ]
+})}
 ${darkModeDiagramFixCSS({
   bgColor: '#0B1120',
   textColor: '#CBD5E1',

@@ -7,12 +7,12 @@
 </script>
 
 {#if env.privacyPolicyUrl}
-  <a href={env.privacyPolicyUrl} target="_blank">
+  <a href={env.privacyPolicyUrl} target="_blank" class="cursor-pointer">
     <ShieldIcon />
   </a>
 {:else}
   <Dialog.Root>
-    <Dialog.Trigger>
+    <Dialog.Trigger class="cursor-pointer">
       <ShieldIcon />
     </Dialog.Trigger>
     <Dialog.Content class="max-h-full overflow-hidden overflow-y-auto p-12">
@@ -55,10 +55,10 @@
         <p>No privacy policy has been configured for this deployment.</p>
         <p>
           If you are self-hosting the Mermaid Live Editor, set the
-          <code class="rounded bg-muted px-1.5 py-0.5 text-sm">MERMAID_PRIVACY_POLICY_URL</code>
+          <code class="bg-muted rounded px-1.5 py-0.5 text-sm">MERMAID_PRIVACY_POLICY_URL</code>
           environment variable at build time to link to your privacy policy, or set
-          <code class="rounded bg-muted px-1.5 py-0.5 text-sm">MERMAID_HIDE_PRIVACY_POLICY</code>
-          to <code class="rounded bg-muted px-1.5 py-0.5 text-sm">true</code> to hide this button.
+          <code class="bg-muted rounded px-1.5 py-0.5 text-sm">MERMAID_HIDE_PRIVACY_POLICY</code>
+          to <code class="bg-muted rounded px-1.5 py-0.5 text-sm">true</code> to hide this button.
         </p>
       {/if}
     </Dialog.Content>

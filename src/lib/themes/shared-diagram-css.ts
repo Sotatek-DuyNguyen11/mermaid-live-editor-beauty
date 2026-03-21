@@ -206,6 +206,33 @@ path.er.relationshipLine {
 }
 
 /* ============================================================
+   BLOCK DIAGRAM
+   ============================================================ */
+
+/* Mermaid block labels use HTML nodes in some cases; keep them transparent in dark mode. */
+.block .label foreignObject div,
+.block .label div,
+.block .label span,
+.block .label p {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* ============================================================
+   MINDMAP
+   ============================================================ */
+
+/* Mindmap uses markdown labels; prevent browser default black blocks in dark mode. */
+.mindmap-node .label foreignObject div,
+.mindmap-node .label div,
+.mindmap-node-label div,
+.mindmap-node-label span,
+.mindmap-node-label p {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* ============================================================
    GANTT (bonus)
    ============================================================ */
 .section0, .section1, .section2, .section3 {
@@ -248,5 +275,27 @@ foreignObject .zenuml .lifeline {
 foreignObject .zenuml .occurrence {
   background-color: ${opts.mutedColor} !important;
 }
+`;
+}
+
+export function mindmapLabelColorCSS(opts: { rootColor: string; sectionColors: string[] }): string {
+  const sectionRules = opts.sectionColors
+    .map(
+      (color, index) => `
+.section-${index - 1} span,
+.section-${index - 1} p,
+.section-${index - 1} div {
+  color: ${color} !important;
+}`
+    )
+    .join('\n');
+
+  return `
+.section-root span,
+.section-root p,
+.section-root div {
+  color: ${opts.rootColor} !important;
+}
+${sectionRules}
 `;
 }
