@@ -206,29 +206,19 @@ path.er.relationshipLine {
 }
 
 /* ============================================================
-   BLOCK DIAGRAM
+   BLOCK DIAGRAM & MINDMAP
+   Labels use foreignObject HTML nodes; color inherits from theme.
+   Background handled by universal foreignObject rule below.
    ============================================================ */
-
-/* Mermaid block labels use HTML nodes in some cases; keep them transparent in dark mode. */
 .block .label foreignObject div,
 .block .label div,
 .block .label span,
-.block .label p {
-  background: transparent !important;
-  color: inherit !important;
-}
-
-/* ============================================================
-   MINDMAP
-   ============================================================ */
-
-/* Mindmap uses markdown labels; prevent browser default black blocks in dark mode. */
+.block .label p,
 .mindmap-node .label foreignObject div,
 .mindmap-node .label div,
 .mindmap-node-label div,
 .mindmap-node-label span,
 .mindmap-node-label p {
-  background: transparent !important;
   color: inherit !important;
 }
 
@@ -238,6 +228,26 @@ path.er.relationshipLine {
 .section0, .section1, .section2, .section3 {
   rx: 6;
   ry: 6;
+}
+
+/* ============================================================
+   UNIVERSAL FOREIGNOBJECT LABEL FIX
+   Mermaid wraps labels in foreignObject > div for many diagram
+   types (timeline, journey, kanban, flowchart markdown, etc.).
+   Mermaid's theme engine also sets inline background-color on
+   .nodeLabel span elements. Force transparent so the node fill
+   shows through instead of opaque black/colored blocks on text.
+   ============================================================ */
+foreignObject div,
+foreignObject span,
+foreignObject p,
+.nodeLabel span,
+.label span,
+.edgeLabel span,
+.timeline-text span,
+.journey-section-text span {
+  background-color: transparent !important;
+  background: transparent !important;
 }
 `;
 
@@ -251,11 +261,14 @@ export function darkModeDiagramFixCSS(opts: {
   textColor: string;
   borderColor: string;
   mutedColor: string;
+  /** ER attribute row fills — Mermaid v11 computes HSL from primaryColor, ignoring attributeBackgroundColor* */
+  erAttrEvenFill?: string;
+  erAttrOddFill?: string;
 }): string {
   return `
 /* === ZenUML dark mode override === */
-foreignObject > div,
-foreignObject .zenuml {
+foreignObject .zenuml,
+foreignObject .zenuml > div {
   background-color: ${opts.bgColor} !important;
   color: ${opts.textColor} !important;
 }
@@ -274,6 +287,21 @@ foreignObject .zenuml .lifeline {
 }
 foreignObject .zenuml .occurrence {
   background-color: ${opts.mutedColor} !important;
+}
+
+/* === ER diagram dark mode fix === */
+/* Mermaid v11 computes row fills from primaryColor HSL, ignoring
+   attributeBackgroundColorEven/Odd.  Override the <path> fills in
+   row-rect-even (dark by default) and row-rect-odd (white by default). */
+.row-rect-even path {
+  fill: ${opts.erAttrEvenFill ?? opts.bgColor} !important;
+}
+.row-rect-odd path {
+  fill: ${opts.erAttrOddFill ?? opts.borderColor} !important;
+}
+/* Ensure ER attribute text is readable against the overridden row fills */
+[id*="entity"] foreignObject div span {
+  color: ${opts.textColor} !important;
 }
 `;
 }

@@ -101,9 +101,11 @@ ${mindmapLabelColorCSS({
 })}
 ${darkModeDiagramFixCSS({
   bgColor: '#150C35',
-  textColor: '#F5F3FF',
-  borderColor: '#2D1B69',
-  mutedColor: '#3B2580'
+  borderColor: '#3D2880',
+  erAttrEvenFill: '#2E2065',
+  erAttrOddFill: '#241850',
+  mutedColor: '#3B2580',
+  textColor: '#F5F3FF'
 })}`;
 
 export const glassmorphismTheme: DiagramTheme = {
@@ -288,20 +290,20 @@ export const glassmorphismTheme: DiagramTheme = {
     },
     diagramCSS: glassDarkDiagramCSS,
     diagramVariables: {
-      activationBkgColor: '#2D1B69',
+      activationBkgColor: '#3D2880',
       activationBorderColor: '#A78BFA',
-      actorBkg: '#1E1145',
+      actorBkg: '#321F65',
       actorBorder: '#A78BFA',
       actorTextColor: '#F5F3FF',
-      attributeBackgroundColorEven: '#1A0F40',
-      attributeBackgroundColorOdd: '#150C35',
-      cScale0: '#2D1B69',
+      attributeBackgroundColorEven: '#2E2065',
+      attributeBackgroundColorOdd: '#241850',
+      cScale0: '#3D2880',
       cScale1: '#4A1942',
       cScale2: '#0D3A2A',
       cScale3: '#3D2800',
-      cScale4: '#4A1515',
-      cScale5: '#1E1B4B',
-      cScale6: '#451A03',
+      cScale4: '#621E1E',
+      cScale5: '#302D6B',
+      cScale6: '#5E2808',
       cScale7: '#134E4A',
       cScaleLabel0: '#DDD6FE',
       cScaleLabel1: '#F9A8D4',
@@ -318,7 +320,7 @@ export const glassmorphismTheme: DiagramTheme = {
       cScalePeer5: '#DC2626',
       cScalePeer6: '#6366F1',
       cScalePeer7: '#EA580C',
-      clusterBkg: '#1A0F40',
+      clusterBkg: '#2E2065',
       clusterBorder: '#7C3AED',
       crit0: '#EF4444',
       done0: '#22C55E',
@@ -335,13 +337,13 @@ export const glassmorphismTheme: DiagramTheme = {
       git7: '#C4B5FD',
       gitBranchLabel0: '#FFFFFF',
       gitInv0: '#FFFFFF',
-      labelBoxBkgColor: '#2D1B69',
+      labelBoxBkgColor: '#3D2880',
       labelBoxBorderColor: '#F472B6',
       labelColor: '#F5F3FF',
       labelTextColor: '#F5F3FF',
       lineColor: '#A78BFA',
       loopTextColor: '#F5F3FF',
-      mainBkg: '#1E1145',
+      mainBkg: '#321F65',
       nodeBorder: '#A78BFA',
       noteBkgColor: '#2A1F00',
       noteBorderColor: '#FBBF24',
@@ -354,10 +356,10 @@ export const glassmorphismTheme: DiagramTheme = {
       pie6: '#22D3EE',
       pie7: '#FB923C',
       primaryBorderColor: '#A78BFA',
-      primaryColor: '#1E1145',
+      primaryColor: '#321F65',
       primaryTextColor: '#F5F3FF',
       secondaryBorderColor: '#F472B6',
-      secondaryColor: '#2D1B69',
+      secondaryColor: '#3D2880',
       secondaryTextColor: '#F5F3FF',
       sequenceNumberColor: '#FFFFFF',
       signalColor: '#A78BFA',
@@ -369,7 +371,7 @@ export const glassmorphismTheme: DiagramTheme = {
     },
     layoutConfig: {
       packet: {
-        blockFillColor: '#1E1145',
+        blockFillColor: '#321F65',
         blockStrokeColor: '#A78BFA',
         endByteColor: '#A1A1AA',
         labelColor: '#F5F3FF',
@@ -386,14 +388,14 @@ export const glassmorphismTheme: DiagramTheme = {
         xAxis: {
           labelColor: '#A1A1AA',
           titleColor: '#DDD6FE',
-          tickColor: '#2D1B69',
-          axisLineColor: '#2D1B69'
+          tickColor: '#3D2880',
+          axisLineColor: '#3D2880'
         },
         yAxis: {
           labelColor: '#A1A1AA',
           titleColor: '#DDD6FE',
-          tickColor: '#2D1B69',
-          axisLineColor: '#2D1B69'
+          tickColor: '#3D2880',
+          axisLineColor: '#3D2880'
         }
       }
     },

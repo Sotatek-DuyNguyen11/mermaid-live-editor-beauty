@@ -155,9 +155,11 @@ ${mindmapLabelColorCSS({
 })}
 ${darkModeDiagramFixCSS({
   bgColor: '#120818',
-  textColor: '#E8D5F5',
-  borderColor: '#2D0A2E',
-  mutedColor: '#3D1540'
+  borderColor: '#4A1548',
+  erAttrEvenFill: '#351848',
+  erAttrOddFill: '#221235',
+  mutedColor: '#4D2050',
+  textColor: '#E8D5F5'
 })}`;
 
 export const neonTheme: DiagramTheme = {
@@ -320,21 +322,21 @@ export const neonTheme: DiagramTheme = {
     },
     diagramCSS: neonDarkDiagramCSS,
     diagramVariables: {
-      activationBkgColor: '#1A0520',
+      activationBkgColor: '#351848',
       activationBorderColor: '#F472B6',
-      actorBkg: '#140A1E',
+      actorBkg: '#2E1C48',
       actorBorder: '#F472B6',
       actorTextColor: '#E8D5F5',
-      attributeBackgroundColorEven: '#1A0520',
-      attributeBackgroundColorOdd: '#120818',
-      cScale0: '#2D0A2E',
-      cScale1: '#1A1040',
-      cScale2: '#0A1E15',
-      cScale3: '#2D1F00',
-      cScale4: '#3B1010',
-      cScale5: '#1E0530',
-      cScale6: '#351A03',
-      cScale7: '#0D2535',
+      attributeBackgroundColorEven: '#351848',
+      attributeBackgroundColorOdd: '#221235',
+      cScale0: '#4A1548',
+      cScale1: '#2A1A5C',
+      cScale2: '#143025',
+      cScale3: '#422E05',
+      cScale4: '#521A1A',
+      cScale5: '#381250',
+      cScale6: '#4A2508',
+      cScale7: '#15384D',
       cScaleLabel0: '#F9A8D4',
       cScaleLabel1: '#A5B4FC',
       cScaleLabel2: '#6EE7B7',
@@ -350,7 +352,7 @@ export const neonTheme: DiagramTheme = {
       cScalePeer5: '#EF4444',
       cScalePeer6: '#A855F7',
       cScalePeer7: '#06B6D4',
-      clusterBkg: '#1A0520',
+      clusterBkg: '#351848',
       clusterBorder: '#EC4899',
       crit0: '#EF4444',
       done0: '#22C55E',
@@ -367,15 +369,15 @@ export const neonTheme: DiagramTheme = {
       git7: '#FB923C',
       gitBranchLabel0: '#0A0510',
       gitInv0: '#0A0510',
-      labelBoxBkgColor: '#1A0520',
+      labelBoxBkgColor: '#351848',
       labelBoxBorderColor: '#818CF8',
       labelColor: '#E8D5F5',
       labelTextColor: '#E8D5F5',
       lineColor: '#F472B6',
       loopTextColor: '#E8D5F5',
-      mainBkg: '#140A1E',
+      mainBkg: '#2E1C48',
       nodeBorder: '#F472B6',
-      noteBkgColor: '#1A1030',
+      noteBkgColor: '#281A48',
       noteBorderColor: '#818CF8',
       noteTextColor: '#E8D5F5',
       pie1: '#F472B6',
@@ -386,22 +388,22 @@ export const neonTheme: DiagramTheme = {
       pie6: '#C084FC',
       pie7: '#22D3EE',
       primaryBorderColor: '#F472B6',
-      primaryColor: '#140A1E',
+      primaryColor: '#2E1C48',
       primaryTextColor: '#E8D5F5',
       secondaryBorderColor: '#818CF8',
-      secondaryColor: '#1A0520',
+      secondaryColor: '#381A4A',
       secondaryTextColor: '#E8D5F5',
       sequenceNumberColor: '#0A0510',
       signalColor: '#F472B6',
       signalTextColor: '#E8D5F5',
       tertiaryBorderColor: '#34D399',
-      tertiaryColor: '#0A1E15',
+      tertiaryColor: '#143025',
       tertiaryTextColor: '#E8D5F5',
       titleColor: '#F472B6'
     },
     layoutConfig: {
       packet: {
-        blockFillColor: '#140A1E',
+        blockFillColor: '#2E1C48',
         blockStrokeColor: '#F472B6',
         endByteColor: '#A78BFA',
         labelColor: '#E8D5F5',
@@ -418,14 +420,14 @@ export const neonTheme: DiagramTheme = {
         xAxis: {
           labelColor: '#A78BFA',
           titleColor: '#F9A8D4',
-          tickColor: '#2D0A2E',
-          axisLineColor: '#2D0A2E'
+          tickColor: '#4A1548',
+          axisLineColor: '#4A1548'
         },
         yAxis: {
           labelColor: '#A78BFA',
           titleColor: '#F9A8D4',
-          tickColor: '#2D0A2E',
-          axisLineColor: '#2D0A2E'
+          tickColor: '#4A1548',
+          axisLineColor: '#4A1548'
         }
       }
     },

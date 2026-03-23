@@ -100,9 +100,11 @@ ${mindmapLabelColorCSS({
 })}
 ${darkModeDiagramFixCSS({
   bgColor: '#0A1929',
-  textColor: '#F1F5F9',
-  borderColor: '#1E3A5F',
-  mutedColor: '#334155'
+  borderColor: '#2A4A72',
+  erAttrEvenFill: '#162F55',
+  erAttrOddFill: '#122648',
+  mutedColor: '#334155',
+  textColor: '#F1F5F9'
 })}`;
 
 export const defaultTheme: DiagramTheme = {
@@ -289,17 +291,17 @@ export const defaultTheme: DiagramTheme = {
     diagramVariables: {
       activationBkgColor: '#1E3A5F',
       activationBorderColor: '#60A5FA',
-      actorBkg: '#0F2B52',
+      actorBkg: '#1A3F6B',
       actorBorder: '#60A5FA',
       actorTextColor: '#F1F5F9',
-      attributeBackgroundColorEven: '#0D1F3C',
-      attributeBackgroundColorOdd: '#0B1628',
+      attributeBackgroundColorEven: '#162F55',
+      attributeBackgroundColorOdd: '#122648',
       cScale0: '#1E3A5F',
       cScale1: '#164E63',
       cScale2: '#14532D',
       cScale3: '#78350F',
       cScale4: '#7F1D1D',
-      cScale5: '#3B0764',
+      cScale5: '#551090',
       cScale6: '#7C2D12',
       cScale7: '#134E4A',
       cScaleLabel0: '#BFDBFE',
@@ -317,7 +319,7 @@ export const defaultTheme: DiagramTheme = {
       cScalePeer5: '#DC2626',
       cScalePeer6: '#7C3AED',
       cScalePeer7: '#EA580C',
-      clusterBkg: '#0D1F3C',
+      clusterBkg: '#162F55',
       clusterBorder: '#3B82F6',
       crit0: '#EF4444',
       done0: '#22C55E',
@@ -334,13 +336,13 @@ export const defaultTheme: DiagramTheme = {
       git7: '#2DD4BF',
       gitBranchLabel0: '#FFFFFF',
       gitInv0: '#FFFFFF',
-      labelBoxBkgColor: '#0F2B52',
+      labelBoxBkgColor: '#1A3F6B',
       labelBoxBorderColor: '#22D3EE',
       labelColor: '#F1F5F9',
       labelTextColor: '#F1F5F9',
       lineColor: '#60A5FA',
       loopTextColor: '#F1F5F9',
-      mainBkg: '#0F2B52',
+      mainBkg: '#1A3F6B',
       nodeBorder: '#60A5FA',
       noteBkgColor: '#2A2000',
       noteBorderColor: '#FBBF24',
@@ -353,7 +355,7 @@ export const defaultTheme: DiagramTheme = {
       pie6: '#C084FC',
       pie7: '#FB923C',
       primaryBorderColor: '#60A5FA',
-      primaryColor: '#0F2B52',
+      primaryColor: '#1A3F6B',
       primaryTextColor: '#F1F5F9',
       secondaryBorderColor: '#22D3EE',
       secondaryColor: '#0D3354',
@@ -368,7 +370,7 @@ export const defaultTheme: DiagramTheme = {
     },
     layoutConfig: {
       packet: {
-        blockFillColor: '#0F2B52',
+        blockFillColor: '#1A3F6B',
         blockStrokeColor: '#60A5FA',
         endByteColor: '#94A3B8',
         labelColor: '#F1F5F9',
