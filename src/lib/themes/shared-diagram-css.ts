@@ -324,6 +324,15 @@ foreignObject .zenuml .occurrence {
   stroke-opacity: 0.8 !important;
   filter: brightness(1.3) saturate(1.2);
 }
+
+/* === Mindmap dark mode fix === */
+/* Edge strokes use cScale colors which, even brightened, are subtle at 2px.
+   Bump width and add brightness so branches are clearly traceable. */
+.mindmap-node ~ .edge,
+[class*="section-edge-"] {
+  stroke-width: 2.5px !important;
+  filter: brightness(1.5) saturate(1.3);
+}
 `;
 }
 
