@@ -34,7 +34,9 @@
         variant="ghost"
         class={['px-2', activeTabID === tab.id && 'border-b-accent rounded-b-none border-b-2']}
         onclick={toggleTabs(tab)}
-        onkeypress={toggleTabs(tab)}>
+        onkeydown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') toggleTabs(tab)(e);
+        }}>
         <tab.icon />
         {tab.title}
       </Button>

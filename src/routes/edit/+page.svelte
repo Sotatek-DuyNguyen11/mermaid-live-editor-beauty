@@ -87,6 +87,7 @@
     <Toggle
       bind:pressed={isHistoryOpen}
       size="sm"
+      aria-label="Toggle history panel"
       class="data-[state=on]:bg-accent data-[state=on]:text-accent-foreground">
       <HistoryIcon />
     </Toggle>

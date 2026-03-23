@@ -131,7 +131,7 @@
 {/snippet}
 
 <Popover.Root>
-  <Popover.Trigger class="shrink-0 cursor-pointer">
+  <Popover.Trigger class="shrink-0 cursor-pointer" aria-label="Main menu">
     <MenuIcon class="size-6" />
   </Popover.Trigger>
   <Popover.Content

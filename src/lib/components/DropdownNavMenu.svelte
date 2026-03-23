@@ -13,8 +13,8 @@
 </script>
 
 <Popover.Root>
-  <Popover.Trigger class="flex cursor-pointer items-center gap-0">
-    <Button variant="ghost" size="sm">
+  <Popover.Trigger class="flex cursor-pointer items-center gap-0" aria-label="GitHub links">
+    <Button variant="ghost" size="sm" aria-hidden="true" tabindex="-1">
       <props.icon class={props.class} />
     </Button>
   </Popover.Trigger>

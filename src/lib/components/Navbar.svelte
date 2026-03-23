@@ -59,12 +59,15 @@
       role="button"
       tabindex="0"
       onclick={trackBannerClick}
-      onkeypress={trackBannerClick}>
+      onkeydown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') trackBannerClick();
+      }}>
       <activePromotion.component {closeBanner} />
     </div>
     {#snippet closeBanner()}
       <Button
         title="Dismiss banner"
+        aria-label="Dismiss banner"
         variant="ghost"
         class="hover:bg-transparent hover:text-[#261A56]"
         size="sm"

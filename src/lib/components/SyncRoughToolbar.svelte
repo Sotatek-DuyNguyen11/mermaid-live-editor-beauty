@@ -28,7 +28,12 @@
 
   <Popover.Root>
     <Popover.Trigger class="cursor-pointer">
-      <Button variant="ghost" size="icon" title="Theme" class="[&_svg]:size-5">
+      <Button
+        variant="ghost"
+        size="icon"
+        title="Theme"
+        aria-label="Diagram theme"
+        class="[&_svg]:size-5">
         <ThemeIcon />
       </Button>
     </Popover.Trigger>

@@ -58,7 +58,9 @@
       isTabsShown && 'pb-1'
     ]}
     onclick={toggleCardOpen}
-    onkeypress={toggleCardOpen}>
+    onkeydown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') toggleCardOpen();
+    }}>
     {#if icon || title}
       <span role="menubar" tabindex="0" class="flex w-fit items-center gap-3">
         {#if icon}

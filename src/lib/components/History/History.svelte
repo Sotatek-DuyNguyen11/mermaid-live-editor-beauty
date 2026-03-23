@@ -133,14 +133,16 @@
         variant="ghost"
         id="uploadHistory"
         onclick={uploadHistory}
-        title="Upload history"><UploadIcon /></Button>
+        title="Upload history"
+        aria-label="Upload history"><UploadIcon /></Button>
       {#if $historyStore.length > 0}
         <Button
           id="downloadHistory"
           size="icon"
           variant="ghost"
           onclick={downloadHistory}
-          title="Download history"><DownloadIcon /></Button>
+          title="Download history"
+          aria-label="Download history"><DownloadIcon /></Button>
       {/if}
       <Separator orientation="vertical" />
       <Button
@@ -148,7 +150,8 @@
         size="icon"
         variant="ghost"
         onclick={() => saveHistory()}
-        title="Save current state"><SaveIcon /></Button>
+        title="Save current state"
+        aria-label="Save current state"><SaveIcon /></Button>
       {#if $historyModeStore !== 'loader'}
         <Button
           id="clearHistory"
@@ -156,7 +159,8 @@
           variant="ghost"
           class="hover:text-destructive"
           onclick={() => clearHistory()}
-          title="Delete all saved states"><TrashAltIcon /></Button>
+          title="Delete all saved states"
+          aria-label="Delete all saved states"><TrashAltIcon /></Button>
       {/if}
     </div>
   {/snippet}
@@ -184,7 +188,12 @@
               <span class="text-primary-foreground/50 text-sm whitespace-nowrap">
                 {dayjs(time).fromNow()}
               </span>
-              <Button size="icon" variant="ghost" onclick={() => restoreHistoryItem(state)}>
+              <Button
+                size="icon"
+                variant="ghost"
+                onclick={() => restoreHistoryItem(state)}
+                aria-label="Restore state"
+                title="Restore state">
                 <UndoIcon />
               </Button>
               {#if type !== 'loader'}
@@ -192,7 +201,9 @@
                   size="icon"
                   variant="ghost"
                   class="hover:text-destructive"
-                  onclick={() => clearHistory(id)}>
+                  onclick={() => clearHistory(id)}
+                  aria-label="Delete state"
+                  title="Delete state">
                   <TrashAltIcon />
                 </Button>
               {/if}
