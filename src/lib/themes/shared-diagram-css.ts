@@ -223,6 +223,19 @@ path.er.relationshipLine {
 }
 
 /* ============================================================
+   SANKEY DIAGRAM
+   ============================================================ */
+.node rect {
+  rx: 4;
+  ry: 4;
+}
+.node-labels text {
+  font-family: "Inter Variable", system-ui, sans-serif !important;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+/* ============================================================
    GANTT (bonus)
    ============================================================ */
 .section0, .section1, .section2, .section3 {
@@ -302,6 +315,14 @@ foreignObject .zenuml .occurrence {
 /* Ensure ER attribute text is readable against the overridden row fills */
 [id*="entity"] foreignObject div span {
   color: ${opts.textColor} !important;
+}
+
+/* === Sankey diagram dark mode fix === */
+/* Mermaid sets stroke-opacity="0.5" on the .links group, making gradient
+   flows nearly invisible on dark backgrounds.  Raise opacity + brighten. */
+.links {
+  stroke-opacity: 0.8 !important;
+  filter: brightness(1.3) saturate(1.2);
 }
 `;
 }
