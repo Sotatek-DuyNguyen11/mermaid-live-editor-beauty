@@ -95,7 +95,7 @@ path.er.relationshipLine {
 .cluster-label .nodeLabel {
   font-weight: 500 !important;
   font-size: 0.8em !important;
-  opacity: 0.55 !important;
+  opacity: 0.75 !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -332,6 +332,24 @@ foreignObject .zenuml .occurrence {
 [class*="section-edge-"] {
   stroke-width: 2.5px !important;
   filter: brightness(1.5) saturate(1.3);
+}
+
+/* === Kanban dark mode fix === */
+/* Mermaid hardcodes card fill to #f4f4f4 (nodeBkg) regardless of dark theme,
+   and our dark text color makes white-on-white.  Override card backgrounds
+   to match the dark theme and ensure text is readable. */
+.node.undefined rect.basic.label-container,
+.node.undefined rect.label-container {
+  fill: ${opts.bgColor} !important;
+  stroke: ${opts.borderColor} !important;
+}
+.node.undefined .nodeLabel,
+.node.undefined .nodeLabel p,
+.node.undefined .nodeLabel span {
+  color: ${opts.textColor} !important;
+}
+.kanban-ticket-link {
+  fill: ${opts.textColor} !important;
 }
 `;
 }
