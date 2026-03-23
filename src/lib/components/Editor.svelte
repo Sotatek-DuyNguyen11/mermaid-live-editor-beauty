@@ -48,13 +48,13 @@
   {/if}
   {#if showError && $stateStore.error instanceof Error}
     <div class="flex flex-col text-sm" data-testid={TID.errorContainer}>
-      <div class="flex items-center justify-between gap-2 bg-slate-900 p-2 text-white">
+      <div class="bg-destructive/10 text-foreground flex items-center justify-between gap-2 p-2">
         <div class="flex w-fit items-center gap-2">
           <ExclamationCircleIcon class="text-destructive size-6" aria-hidden="true" />
           <div class="flex flex-col">
             <p>Syntax error</p>
             {#if env.isEnabledMermaidChartLinks && $stateStore.editorMode === 'code'}
-              <p class="text-xs text-white/60" data-testid={TID.aiHelpText}>
+              <p class="text-muted-foreground text-xs" data-testid={TID.aiHelpText}>
                 Create a free account to repair with AI
               </p>
             {/if}

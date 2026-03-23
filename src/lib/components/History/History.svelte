@@ -175,17 +175,17 @@
                   href={url}
                   target="_blank"
                   title="Open revision in new tab"
-                  class="text-blue-500 hover:underline">{name}</a>
+                  class="text-primary hover:underline">{name}</a>
               {:else}
                 <span class="whitespace-nowrap">{name}</span>
               {/if}
-              <span class="text-primary-foreground/30 text-xs whitespace-nowrap">
+              <span class="text-muted-foreground text-xs whitespace-nowrap">
                 {new Date(time).toLocaleString()}
               </span>
             </div>
 
             <div class="flex items-center gap-2">
-              <span class="text-primary-foreground/50 text-sm whitespace-nowrap">
+              <span class="text-muted-foreground text-sm whitespace-nowrap">
                 {dayjs(time).fromNow()}
               </span>
               <Button

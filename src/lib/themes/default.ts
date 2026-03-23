@@ -220,6 +220,36 @@ export const defaultTheme: DiagramTheme = {
       tertiaryTextColor: '#0F172A',
       titleColor: '#1D4ED8'
     },
+    layoutConfig: {
+      packet: {
+        blockFillColor: '#DBEAFE',
+        blockStrokeColor: '#1D4ED8',
+        endByteColor: '#64748B',
+        labelColor: '#0F172A',
+        startByteColor: '#64748B',
+        titleColor: '#1D4ED8'
+      },
+      radar: {
+        axisColor: '#1D4ED8',
+        graticuleColor: 'rgba(29,78,216,0.20)'
+      },
+      xyChart: {
+        backgroundColor: '#F8FAFC',
+        titleColor: '#1D4ED8',
+        xAxis: {
+          labelColor: '#64748B',
+          titleColor: '#1E3A5F',
+          tickColor: '#CBD5E1',
+          axisLineColor: '#CBD5E1'
+        },
+        yAxis: {
+          labelColor: '#64748B',
+          titleColor: '#1E3A5F',
+          tickColor: '#CBD5E1',
+          axisLineColor: '#CBD5E1'
+        }
+      }
+    },
     svgPostProcess: { gradientStart: '#0052CC', gradientEnd: '#00B4DB' }
   },
   dark: {

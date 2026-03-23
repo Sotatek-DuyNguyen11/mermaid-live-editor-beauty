@@ -221,6 +221,36 @@ export const glassmorphismTheme: DiagramTheme = {
       tertiaryTextColor: '#1E1B4B',
       titleColor: '#6D28D9'
     },
+    layoutConfig: {
+      packet: {
+        blockFillColor: '#DDD6FE',
+        blockStrokeColor: '#7C3AED',
+        endByteColor: '#6B7280',
+        labelColor: '#1E1B4B',
+        startByteColor: '#6B7280',
+        titleColor: '#6D28D9'
+      },
+      radar: {
+        axisColor: '#7C3AED',
+        graticuleColor: 'rgba(124,58,237,0.20)'
+      },
+      xyChart: {
+        backgroundColor: '#FAF5FF',
+        titleColor: '#6D28D9',
+        xAxis: {
+          labelColor: '#6B7280',
+          titleColor: '#3B0764',
+          tickColor: '#D8B4FE',
+          axisLineColor: '#D8B4FE'
+        },
+        yAxis: {
+          labelColor: '#6B7280',
+          titleColor: '#3B0764',
+          tickColor: '#D8B4FE',
+          axisLineColor: '#D8B4FE'
+        }
+      }
+    },
     svgPostProcess: { gradientStart: '#8B5CF6', gradientEnd: '#EC4899' }
   },
   dark: {

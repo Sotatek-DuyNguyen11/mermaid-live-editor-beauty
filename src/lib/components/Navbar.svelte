@@ -69,7 +69,7 @@
         title="Dismiss banner"
         aria-label="Dismiss banner"
         variant="ghost"
-        class="hover:bg-transparent hover:text-[#261A56]"
+        class="hover:text-foreground hover:bg-transparent"
         size="sm"
         onclick={() => {
           dismissPromotion(activePromotion?.id);

@@ -136,7 +136,7 @@
     </div>
     {#if isNetlify}
       <div class="flex w-full items-center justify-center">
-        <a class="link text-sm text-gray-500 underline" href="https://netlify.com">
+        <a class="link text-muted-foreground text-sm underline" href="https://netlify.com">
           This site is powered by Netlify
         </a>
       </div>

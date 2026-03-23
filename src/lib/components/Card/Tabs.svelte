@@ -43,7 +43,7 @@
 
       {#if index < tabs.length - 1}
         <div class="my-2">
-          <Separator orientation="vertical" class="w-0.5 bg-slate-300" />
+          <Separator orientation="vertical" class="bg-border w-0.5" />
         </div>
       {/if}
     {/each}
